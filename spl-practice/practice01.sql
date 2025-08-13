@@ -66,4 +66,11 @@ where title = 'Engineer';
    
 -- 문제11
 -- 사번이 13250인 직원의 직책 변경 상황을 시간순으로 출력해보세요.
+SELECT emp_no,
+       title,
+       from_date,
+       to_date
+FROM titles
+WHERE emp_no = 13250
+ORDER BY from_date ASC;
 
