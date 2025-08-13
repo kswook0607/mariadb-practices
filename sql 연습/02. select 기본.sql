@@ -5,6 +5,7 @@ select count(*) from titles;
 --
 -- select 연습
 --
+--
 -- 예제01: deaprtments 테이블의 모든 데이터를 출력
 select * from departments;
 
