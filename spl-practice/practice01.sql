@@ -5,7 +5,7 @@
 
 select concat(first_name, ' ', last_name) as '전체이름', emp_no
 from employees
-where emp_no = '10944';
+where emp_no = 10944;
 
 -- 문제2. 
 -- 전체 직원의 다음 정보를 조회하세요. 가장 선임부터 출력이 되도록 하세요.
@@ -38,7 +38,8 @@ from departments;
 -- 문제6.
 -- 현재 부서 매니저는 몇 명이나 있나요?(역임 매너저는 제외)
 select count(*)
-from dept_manager;
+from dept_manager
+where to_date = '9999-01-01';
 
 -- 문제7.
 -- 전체 부서를 출력하려고 합니다. 순서는 부서이름이 긴 순서대로 출력해 보세요.
@@ -50,19 +51,20 @@ order by length(dept_name) desc;
 -- 현재 급여가 120,000이상 받는 사원은 몇 명이나 있습니까?
 select count(*)
 from salaries
-where salary >= '120000';
+where salary >= 120000 and to_date = '9999-01-01';
    
 -- 문제9.
 -- 어떤 직책들이 있나요? 중복 없이 이름이 긴 순서대로 출력해 보세요.
 select distinct title
-from titles;
+from titles
+order by length(title) desc;
 
 
 -- 문제10
 -- 현재 Engineer 직책의 사원은 총 몇 명입니까?
 select count(*)
 from titles
-where title = 'Engineer';
+where title = 'Engineer' and to_date = '9999-01-01';
    
 -- 문제11
 -- 사번이 13250인 직원의 직책 변경 상황을 시간순으로 출력해보세요.
