@@ -14,7 +14,7 @@ public class ConnectionEx {
 			Class.forName("org.mariadb.jdbc.Driver");
 			
 			// 2. 연결하기
-			String url  = "jdbc:mariadb://192.168.0.177:3306/webdb";
+			String url  = "jdbc:mariadb://192.168.0.180:3306/webdb";
 			con =  DriverManager.getConnection (url, "webdb", "webdb");
 			
 			System.out.println("연결성공");

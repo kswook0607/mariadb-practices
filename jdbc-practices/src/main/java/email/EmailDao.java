@@ -169,7 +169,7 @@ public class EmailDao {
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
 			
-			String url  = "jdbc:mariadb://192.168.0.177:3306/webdb";
+			String url  = "jdbc:mariadb://192.168.0.180:3306/webdb";
 			con =  DriverManager.getConnection (url, "webdb", "webdb");
 		} catch(ClassNotFoundException ex) {
 			System.out.println("Driver Class Not Found");
